@@ -1,0 +1,119 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  position: relative;
+  background-color: #111;
+  color: white;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  max-height: 80vh;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.popup-box th,
+.popup-box td {
+  border: 1px solid #444;
+  padding: 8px 12px;
+  text-align: left;
+  color: #ddd;
+}
+
+.popup-box th {
+  background-color: #222;
+}
+.popup-header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  padding: 20px 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  border-bottom: 1px solid #333;
+}
+
+.popup-body-container {
+  padding: 105px 30px 30px;
+  max-height: 68vh;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Markdown tables */
+.popup-box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Title centered */
+.popup-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* README-style content */
+.popup-readme {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.popup-details p {
+  margin-bottom: 1rem;
+}
+
+/* Repo link */
+.popup-link {
+  text-align: center;
+}
+
+.project-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-link:hover {
+  color: #4fc3f7;
+}
+
+/* Close button */
+.popup-close-icon {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.popup-close-icon:hover {
+  color: #fff;
+}

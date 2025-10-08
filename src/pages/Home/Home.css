@@ -1,0 +1,72 @@
+.about-container {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.tech-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.aboutMe-title, .project-title, .tech-grid-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.tech-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
+}
+
+.tech-grid-card {
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.tech-grid-header {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.tech-grid-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.tech-grid-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-grid-item {
+  background-color: #222;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.tech-grid-item:hover {
+  background-color: #333;
+}

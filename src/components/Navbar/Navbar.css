@@ -1,0 +1,69 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  border-bottom: 1px solid #eaeaea;
+
+  a {
+    font-weight: 500;
+    color: #fff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #005fa3;
+  }
+}
+
+/* Desktop nav */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* Mobile toggle button */
+.mobile-toggle {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile drawer */
+.mobile-drawer {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  padding: 1rem;
+  border-top: 1px solid #444;
+}
+
+.mobile-drawer a {
+  margin-bottom: 1rem;
+}
+
+/* Show/hide based on screen size */
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .mobile-drawer.open {
+    display: flex;
+  }
+}
+
