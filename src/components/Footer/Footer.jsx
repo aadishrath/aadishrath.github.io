@@ -42,7 +42,7 @@ function Footer() {
                 )}
 
                 <div className="flex justify-center gap-6 text-sm contact-links">
-                    <a href="https://www.linkedin.com/in/aadishrath"
+                    <a href="https://www.linkedin.com/in/adirathore/"
                     target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-gray-300 transition">
                         <FaLinkedin size={15} /> LinkedIn
