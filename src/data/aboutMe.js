@@ -1,9 +1,4 @@
 
 // About me
 export const aboutMe = `
-I'm a full-stack developer with a strong foundation in backend architecture, frontend design, and rapid prototyping.
-I specialize in building dynamic, recruiter-optimized portfolios using modern frameworks like React, Vite, and Tailwind CSS.
-My work blends technical precision with UI/UX polish, SEO strategy, and branding clarity. I thrive in fast-paced environments,
-quickly adapting to new tools and troubleshooting live deployment issues with resilience and resourcefulness. Whether architecting
-scalable APIs or refining pixel-perfect interfaces, I align every project with real-world impact and career outcomes. I’m passionate
-about clean code, modular design, and delivering production-ready solutions.`;
+I'm a Machine Learning Engineer with 6+ years of production software experience and a Master’s in Computer Science (Data Science). I specialize in NLP, Transformers, and deploying ML pipelines using PyTorch, Hugging Face, and AWS. My projects include a house price predictor (R² 0.88) and a sentiment analysis platform with TF-IDF+SVM, LSTM, and DistilBERT. I’ve built modular backends with NestJS, responsive React frontends, and RESTful APIs for real-time inference. At TD Bank, I developed scalable financial apps and reusable UI components in Agile teams. I thrive at the intersection of ML, software architecture, and user-centric design—always pushing for impact, polish, and innovation across the stack.`;
