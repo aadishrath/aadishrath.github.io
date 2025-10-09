@@ -1,16 +1,31 @@
-# React + Vite
+# Aadish Rathore — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio, built with **React**, **Vite**, and **Tailwind CSS v4**. This site showcases my work as a Machine Learning Engineer and Full-Stack Developer, with a focus on recruiter-facing polish, modular architecture, and real-world impact.
 
-Currently, two official plugins are available:
+## 🚀 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 [aadishrath.github.io](https://aadishrath.github.io)
 
-## React Compiler
+## 🧠 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I'm a Machine Learning Engineer with 6+ years of production software experience and a Master’s in Computer Science (Data Science). I specialize in NLP, Transformers, and deploying ML pipelines using PyTorch, Hugging Face, and AWS. My portfolio highlights full-stack ML projects, scalable UI components, and end-to-end engineering.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Vite, Tailwind CSS v4
+- **Deployment**: GitHub Pages
+
+## 📦 Features
+
+- Responsive layout with Tailwind v4
+- SEO-optimized metadata and social preview images
+- Dynamic Languages & Tools grid with icon mapping
+- Modular data architecture for easy updates
+- Recruiter-focused presentation and branding
+
+## 📬 Contact
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/adirathore)  
+- 🧑‍💻 [GitHub](https://github.com/aadishrath)
+
+---
