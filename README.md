@@ -8,7 +8,7 @@ Welcome to my personal portfolio, built with **React**, **Vite**, and **Tailwind
 
 ## 🧠 About Me
 
-I'm a Machine Learning Engineer with 6+ years of production software experience and a Master’s in Computer Science (Data Science). I specialize in NLP, Transformers, and deploying ML pipelines using PyTorch, Hugging Face, and AWS. My portfolio highlights full-stack ML projects, scalable UI components, and end-to-end engineering.
+I'm a Data Engineer with 6+ years of production frontend experience and a Master’s in Applied Science (Data Science). I specialize in NLP, Transformers, deploying ML pipelines using PyTorch, AWS and strong foundations in ETL pipelines, SQL. My portfolio highlights full-stack ML projects, scalable UI components, and end-to-end engineering.
 
 ## 🛠️ Tech Stack
 
