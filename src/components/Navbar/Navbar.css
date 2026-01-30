@@ -1,69 +1,193 @@
-
+/* ---------------------- */
+/* NAVBAR BASE */
+/* ---------------------- */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: black;
-  color: white;
   padding: 1rem 2rem;
   z-index: 1000;
   border-bottom: 1px solid #eaeaea;
-
-  a {
-    font-weight: 500;
-    color: #fff;
-    text-decoration: inherit;
-  }
-  a:hover {
-    color: #005fa3;
-  }
-}
-
-/* Desktop nav */
-.desktop-nav {
   display: flex;
   justify-content: center;
+}
+
+/* Desktop nav links */
+.desktop-nav a {
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+}
+
+.desktop-nav a:hover {
+  color: #005fa3;
+}
+
+.desktop-nav a.active {
+  color: #3494d8;
+}
+
+.desktop-nav button {
+  background: none;
+  border: none;
+  font-weight: 500;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.desktop-nav button:hover{
+  background: none;
+}
+
+.desktop-nav button:focus{
+  outline: none;
+  color: #3494d8;
+}
+
+.desktop-nav button:active{
+  color: #3494d8;
+}
+
+/* Light / Dark Themes */
+body.light .navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+body.dark .navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+/* ---------------------- */
+/* THEME TOGGLE */
+/* ---------------------- */
+.theme-toggle {
+  width: 50px;
+  height: 26px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.theme-toggle .knob {
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle .icon {
+  font-size: 0.9rem;
+  position: absolute;
+}
+
+.theme-toggle .sun {
+  left: 6px;
+}
+
+.theme-toggle .moon {
+  right: 6px;
+}
+
+/* ---------------------- */
+/* DESKTOP NAV */
+/* ---------------------- */
+.desktop-nav {
+  display: flex;
+  align-items: center;
   gap: 2rem;
   font-size: 1.1rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  max-width: 50%;
-  margin: 0 auto;
 }
 
-/* Mobile toggle button */
+/* ---------------------- */
+/* MOBILE TOGGLE BUTTON */
+/* ---------------------- */
 .mobile-toggle {
   display: none;
-  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+}
+
+.mobile-toggle button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
   align-items: center;
 }
 
-/* Mobile drawer */
+.mobile-toggle img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.mobile-toggle svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+/* ---------------------- */
+/* MOBILE DRAWER */
+/* ---------------------- */
 .mobile-drawer {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #111;
   flex-direction: column;
-  background-color: black;
-  padding: 1rem;
-  border-top: 1px solid #444;
+  padding: 80px 20px;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 1500;
+}
+
+.mobile-drawer.open {
+  display: flex;
+  transform: translateX(0);
 }
 
 .mobile-drawer a {
-  margin-bottom: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Show/hide based on screen size */
+.mobile-drawer a:hover {
+  color: #00bcd4;
+}
+
+/* ---------------------- */
+/* RESPONSIVE BEHAVIOR */
+/* ---------------------- */
 @media screen and (max-width: 768px) {
   .desktop-nav {
     display: none;
   }
 
   .mobile-toggle {
-    display: flex;
-  }
-
-  .mobile-drawer.open {
-    display: flex;
+    display: block;
   }
 }
-

@@ -1,7 +1,8 @@
 
-export default [
+export const mlProjects = [
   {
-    title: '🏡 House Price Prediction',
+    icon: '🏡',
+    title: 'House Price Prediction',
     description: 'This project builds and evaluates multiple machine learning models to predict house prices based on various features.',
     repo: 'https://github.com/aadishrath/housePrediction',
     details: `This project builds and evaluates multiple machine learning models to predict house prices based on various features. It includes data preprocessing, feature selection, hyperparameter tuning, and model evaluation. The best performing combination for each model is saved and later used for prediction via React UI.
@@ -46,12 +47,12 @@ export default [
     ## 🧹 Dropped Features Before Training
       Certain features were dropped prior to model training due to the following reasons:
 
-        | Feature       | Reason for Dropping                                      |
-        |---------------|----------------------------------------------------------|
-        | id            | Unique identifier; no predictive value                   |
-        | date          | Timestamp of sale; not useful without temporal modeling  |
-        | sqft_basement | Highly correlated with sqft_living and sqft_above        |
-        | yr_renovated  | Mostly zeros; sparse and not informative                 |
+        | Feature       | Reason for Dropping                                     |
+        |---------------|---------------------------------------------------------|
+        | id            | Unique identifier; no predictive value                  |
+        | date          | Timestamp of sale; not useful without temporal modeling |
+        | sqft_basement | Highly correlated with sqft_living and sqft_above       |
+        | yr_renovated  | Mostly zeros; sparse and not informative                |
 
       These features either introduced noise, redundancy, or lacked meaningful variance. Dropping them improved model interpretability and reduced overfitting risk.
 
@@ -87,7 +88,8 @@ export default [
     `
   },
   {
-    title: '😀 Sentiment Analysis Platform',
+    icon: '😀',
+    title: 'Sentiment Analysis Platform',
     description: 'A modular, full-stack sentiment analysis application that demonstrates foundational and advanced NLP techniques.',
     repo: 'https://github.com/aadishrath/sentimentAnalysis',
     details: `A modular, full-stack sentiment analysis application that demonstrates foundational and advanced NLP techniques. Built with a scalable backend, interactive React frontend, and integrated analytics logging, this project is designed for real-world deployment and resume impact.
@@ -138,11 +140,11 @@ export default [
 
     ## 🧠 Model Details
 
-      | Model        | Description                                                 |
-      | ------------ | ----------------------------------------------------------- | 
-      | TF-IDF + SVM | Lightweight baseline using scikit-learn                     | 
-      | LSTM         | Sequential model trained on IMDB dataset                    | 
-      | Transformer  | Fine-tuned DistilBERT for robust sentiment detection        |
+      | Model        | Description                                           |
+      | ------------ | ----------------------------------------------------- | 
+      | TF-IDF + SVM | Lightweight baseline using scikit-learn               | 
+      | LSTM         | Sequential model trained on IMDB dataset              | 
+      | Transformer  | Fine-tuned DistilBERT for robust sentiment detection  |
 
     ## 📁 Folder Structure
 
@@ -161,7 +163,8 @@ export default [
   `
   },
   {
-    title: '📊 Logistic regression for predictions',
+    icon: '📊',
+    title: 'Logistic regression for predictions',
     description: 'The project is built and trained using logistic regression model using TensorFlow, PyTorch and Scikit-Learn library.',
     repo: 'https://github.com/aadishrath/MatchPredictor',
     details: `In this project, I built and trained logistic regression model using TensorFlow, PyTorch and Scikit-Learn library. This project has large league of legends dataset with 9 columns and 1000 rows. win is the target feature and kills, deaths, assists, gold-earned, cs, wards_placed, wards_killed, damage_dealt are input features.
@@ -199,5 +202,45 @@ export default [
     #### This project was written as part of IBM's Intro to NN and PyTorch course found on [Coursera](https://www.coursera.org/learn/deep-neural-networks-with-pytorch/).
     `
   }
+];
 
+export const feProjects = [
+  {
+    icon: '🌐',
+    title: 'Personal Portfolio Website',
+    description: 'A responsive and modern personal portfolio website built with React and Tailwind CSS to showcase projects and skills.',
+    repo: 'https://github.com/aadishrath/aadishrath.github.io',
+    details: `
+    # Aadish Rathore — Portfolio
+
+    Welcome to my personal portfolio, built with **React**, **Vite**, and **Tailwind CSS v4**. This site showcases my work as a Machine Learning Engineer and Full-Stack Developer, with a focus on recruiter-facing polish, modular architecture, and real-world impact.
+
+    ## 🚀 Live Site
+
+    🔗 [aadishrath.github.io](https://aadishrath.github.io)
+
+    ## 🧠 About Me
+
+    I'm a Data Engineer with 6+ years of production frontend experience and a Master’s in Applied Science (Data Science). I specialize in NLP, Transformers, deploying ML pipelines using PyTorch, AWS and strong foundations in ETL pipelines, SQL. My portfolio highlights full-stack ML projects, scalable UI components, and end-to-end engineering.
+
+    ## 🛠️ Tech Stack
+
+    - **Frontend**: React, Vite, Tailwind CSS v4
+    - **Deployment**: GitHub Pages
+
+    ## 📦 Features
+
+    - Responsive layout with Tailwind v4
+    - SEO-optimized metadata and social preview images
+    - Dynamic Languages & Tools grid with icon mapping
+    - Modular data architecture for easy updates
+    - Recruiter-focused presentation and branding
+
+    ## 📬 Contact
+
+    - 🔗 [LinkedIn](https://www.linkedin.com/in/adirathore)  
+    - 🧑‍💻 [GitHub](https://github.com/aadishrath)
+
+    `
+  },
 ];

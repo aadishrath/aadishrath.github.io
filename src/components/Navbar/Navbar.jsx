@@ -1,31 +1,40 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 // Navbar component
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+function Navbar({ onContactClick, onHomeClick, toggleTheme }) {
+
+  function handleNavClick(e, label) {
+    if (label === "Contact") {
+      e.preventDefault();
+      onContactClick();
+      return;
+    }
+
+    if (label === "Home") {
+      if (window.location.pathname === "/") {
+        e.preventDefault();
+        onHomeClick();
+      }
+    }
+  }
 
   return (
     <nav className="navbar">
       {/* Desktop Nav */}
-      <div className="navbar-content desktop-nav">
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-      </div>
-
-      {/* Mobile Toggle */}
-      <div className="mobile-toggle">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FaTimes /> : <FaBars />}
+      <div className="desktop-nav">
+        <NavLink to="/" onClick={(e) => handleNavClick(e, "Home")} className={({isActive}) => isActive ? "active" : ""}>Home</NavLink>
+        <NavLink to="/projects" className={({isActive}) => isActive ? "active" : ""}>ML Projects</NavLink>
+        <NavLink to="/frontend" className={({isActive}) => isActive ? "active" : ""}>FE Projects</NavLink>
+        <button className="contact-btn" onClick={onContactClick}>
+          Contact
         </button>
-      </div>
 
-      {/* Mobile Drawer */}
-      <div className={`mobile-drawer ${isOpen ? 'open' : ''}`}>
-        <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
-        <Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+        <div className="theme-toggle" onClick={toggleTheme}>
+          <div className="knob"></div>
+          <span className="icon sun">☀️</span>
+          <span className="icon moon">🌙</span>
+        </div>
       </div>
     </nav>
   );

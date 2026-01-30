@@ -13,7 +13,33 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: antiquewhite;
+  scroll-behavior: smooth;
+}
+
+/* Light mode (default) */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+/* Optional: smooth transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode position */
+body.dark .theme-toggle {
+  background: #555;
+}
+
+body.dark .theme-toggle .knob {
+  transform: translateX(24px);
 }
 
 h1 {
@@ -21,21 +47,41 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.gradient-text {
+  /* Standard property */
+  background-clip: text;
+
+  /* WebKit fallback for Chrome, Safari, Edge */
+  -webkit-background-clip: text;
+
+  /* Required to make the text transparent so the gradient shows */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* Default gradient (fallback) */
+  background-image: linear-gradient(90deg, #2563eb, #9333ea);
 }
-button:hover {
-  border-color: #646cff;
+
+body.light .gradient-text {
+  background-image: linear-gradient(90deg, #2563eb, #9333ea);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+body.dark .gradient-text {
+  background-image: linear-gradient(180deg, #facc15, #fb923c);
+}
+
+.gradient-animated {
+  background-image: linear-gradient(180deg, #2563eb, #9333ea);
+  background-size: 200%;
+  animation: gradientShift 4s ease infinite;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
 }

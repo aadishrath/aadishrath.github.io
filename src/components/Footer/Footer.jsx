@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import './Footer.css';
 
 // Footer component
-function Footer() {
+function Footer({ref}) {
     const [showPopup, setShowPopup] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,9 +12,10 @@ function Footer() {
     };
 
     return (
-        <footer className="bg-black text-white py-6 border-t border-gray-700 text-center">
+        <footer ref={ref} className="bg-black text-white py-6 border-t border-gray-700 text-center">
             <section className="max-w-4xl mx-auto contact-section">
-                <h2 className="text-2xl font-semibold mb-6 text-center">Contact Me</h2>
+                <h2 className="text-2xl mb-6 text-center gradient-text">Contact Me</h2>
+                <div className='section-underline'></div>
                 <form className="grid gap-4 mb-8" onSubmit={handleSubmit}>
                     <input type="text"
                         name="name"

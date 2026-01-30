@@ -1,31 +1,46 @@
-import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { aboutMe } from '../../data/aboutMe';
+import { aboutMe, summary } from '../../data/aboutMe';
 import { buckets } from '../../data/langAndTools';
-import projects from '../../data/projectsBuilt';
 import * as FaIcons from 'react-icons/fa';
 import './Home.css';
+import { iconsMap } from '../../assets/iconsMap';
 
 
 // Home page
-function Home() {
+export default function Home() {
   return (
     <div className="px-6 py-10 about-container">
-      <section className="intro">
-        <h2  className="aboutMe-title">About Me</h2>
-        <p className="text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto px-4 py-6">{aboutMe}</p>
-      </section>
+      <section className="hero-intro full-screen-hero" id='first-section'>
+        <h1 className="hero-title gradient-text">Aadish Rathore</h1>
+        <h3 className="hero-subtitle">Software Engineer & ML Enthusiast</h3>
+        <p className="hero-subtext">
+            {summary}
+        </p>
 
-      <section className="featured-projects">
-        <h2  className="project-title">Featured Projects</h2>
-        <div className="project-grid">
-          {projects.slice(0, 6).map((proj, idx) => (
-            <ProjectCard key={idx} {...proj} onClick={() => setSelected(proj)} />
-          ))}
+        <div className="scroll-arrow"
+          onClick={() => {document.getElementById("empty-section").scrollIntoView({behavior: "smooth"});}}
+        >
+          <img src={iconsMap.down} alt="Scroll Down" className="arrow-icon" />
         </div>
       </section>
 
-      <section className="tech-grid-section">
-        <h2 className="tech-grid-title">Languages & Tools</h2>
+      <section className="px-6 py-10" id='empty-section'></section>
+      <section className="intro" id='second-section'>
+        <header>
+          <h2  className="aboutMe-title gradient-text">About Me</h2>
+          <div className='section-underline'></div>
+        </header>
+        <article>
+          {aboutMe.split('\n\n').map((p, i) => (
+            <p key={i} className="text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto px-4 py-6">{p}</p>
+          ))}
+        </article>
+      </section>
+
+      <section className="tech-grid-section" id='fourth-section'>
+        <header>
+          <h2 className="tech-grid-title gradient-text">Languages & Tools</h2>
+          <div className='section-underline'></div>
+        </header>
         <div className="tech-grid-container">
           {buckets.map((bucket, index) => {
             const Icon = FaIcons[bucket.icon];
@@ -45,8 +60,14 @@ function Home() {
           })}
         </div>
       </section>
+
+      <section className="mobile-note">
+        <header>
+          <p className="side-note-title gradient-text">Side Note</p>
+          <div className='section-underline'></div>
+        </header>
+        <p>Thanks for visiting — explore more on desktop for the full experience.</p>
+      </section>
     </div>
   );
 }
-
-export default Home;

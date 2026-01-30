@@ -51,7 +51,7 @@
 }
 
 .popup-body-container {
-  padding: 105px 30px 30px;
+  padding: 105px 10px 30px;
   max-height: 68vh;
   overflow-y: auto;
   flex: 1;
@@ -82,8 +82,25 @@
   margin-bottom: 20px;
 }
 
-.popup-details p {
+.markdown-body p {
   margin-bottom: 1rem;
+}
+
+.markdown-body {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.markdown-body pre {
+  white-space: pre-wrap;     /* allow code blocks to wrap */
+  word-break: break-word;
+  overflow-x: auto;          /* fallback scroll if needed */
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
 }
 
 /* Repo link */
@@ -108,12 +125,11 @@
 .popup-close-icon {
   background: none;
   border: none;
-  color: #ccc;
   font-size: 1.2rem;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .popup-close-icon:hover {
-  color: #fff;
+  background: none;
 }
