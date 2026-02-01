@@ -61,6 +61,8 @@ function Footer({ref}) {
                         <FaEnvelope size={15} /> Resume
                     </a>
                 </div>
+
+                <p className='mb-1'>Copyright &copy; {new Date().getFullYear()} Aadish Rathore</p>
             </section>
         </footer>
     );
