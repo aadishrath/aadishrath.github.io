@@ -207,7 +207,46 @@ export const mlProjects = [
 export const feProjects = [
   {
     icon: '🌐',
+    title: 'Mock Banking App',
+    link: 'https://adirathore7.github.io',
+    description: 'A responsive and modern mock banking app built with React and Tailwind CSS to showcase React hooks and state management.',
+    repo: 'https://github.com/adirathore7/adirathore7.github.io',
+    details: `
+    # Mock Banking App – Aadish Rathore
+    
+    Welcome to the source code for my personal portfolio website, hosted at adirathore7.github.io. This site showcases my projects, skills, experience, and contact information in a clean, responsive layout.
+
+    ## 🚀 Live Site
+
+    🔗 [https://adirathore7.github.io](https://adirathore7.github.io/login)
+
+
+    ## 🛠️ Tech Stack
+
+    - **Frontend**: React, Vite, Tailwind CSS v4
+    - **Deployment**: GitHub Pages
+
+    ## 📦 Features
+
+    - Fully responsive layout
+    - Clean and modern UI
+    - Smooth scrolling and animations
+    - Project showcase section
+    - Contact form or social links
+    - Fast load times (static site)
+
+
+    ## 📬 Contact
+
+    - 🔗 [LinkedIn](https://www.linkedin.com/in/adirathore)  
+    - 🧑‍💻 [GitHub](https://github.com/aadishrath)
+
+    `
+  },
+  {
+    icon: '🌐',
     title: 'Personal Portfolio Website',
+    link: 'https://aadishrath.github.io',
     description: 'A responsive and modern personal portfolio website built with React and Tailwind CSS to showcase projects and skills.',
     repo: 'https://github.com/aadishrath/aadishrath.github.io',
     details: `
