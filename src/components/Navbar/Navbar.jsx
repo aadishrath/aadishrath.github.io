@@ -26,9 +26,8 @@ function Navbar({ onContactClick, onHomeClick, toggleTheme }) {
         <NavLink to="/" onClick={(e) => handleNavClick(e, "Home")} className={({isActive}) => isActive ? "active" : ""}>Home</NavLink>
         <NavLink to="/projects" className={({isActive}) => isActive ? "active" : ""}>ML Projects</NavLink>
         <NavLink to="/frontend" className={({isActive}) => isActive ? "active" : ""}>FE Projects</NavLink>
-        <button className="contact-btn" onClick={onContactClick}>
-          Contact
-        </button>
+        <NavLink to="/sentiment" className={({isActive}) => isActive ? "active" : ""}>Sentiment Analysis</NavLink>
+        <button className="contact-btn" onClick={onContactClick}>Contact</button>
 
         <div className="theme-toggle" onClick={toggleTheme}>
           <div className="knob"></div>

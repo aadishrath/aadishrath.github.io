@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import './App.css';
 import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import Spinner from './components/Spinner/Spinner';
+import './App.css';
 
 // Lazy-loaded pages
 const Home = lazy(() => import('./pages/Home/Home'));
 const MLProjects = lazy(() => import('./pages/Projects/MLProjects'));
 const FEProjects = lazy(() => import('./pages/Projects/FEProjects'));
+const SentimentDemo = lazy(() => import('./pages/SentimentDemo/SentimentDemo'));
 
 // Routing setup
 function App() {
@@ -39,6 +40,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<MLProjects />} />
               <Route path="/frontend" element={<FEProjects />} />
+              <Route path="/sentiment" element={<SentimentDemo />} />
             </Routes>
           </Suspense>
         </main>

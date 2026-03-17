@@ -11,7 +11,7 @@ export default function Home() {
     <div className="px-6 py-10 about-container">
       <section className="hero-intro full-screen-hero" id='first-section'>
         <h1 className="hero-title gradient-text">Aadish Rathore</h1>
-        <h3 className="hero-subtitle">Software Engineer & ML Enthusiast</h3>
+        <h3 className="hero-subtitle">ML Engineer | Angular Developer</h3>
         <p className="hero-subtext">
             {summary}
         </p>
@@ -31,7 +31,7 @@ export default function Home() {
         </header>
         <article>
           {aboutMe.split('\n\n').map((p, i) => (
-            <p key={i} className="text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto px-4 py-6">{p}</p>
+            <p key={i} className="text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto px-4 py-6" dangerouslySetInnerHTML={{ __html: p }} />
           ))}
         </article>
       </section>
