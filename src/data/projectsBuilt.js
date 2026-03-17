@@ -1,3 +1,5 @@
+//  Central place to define all your projects.
+//  Only editing this file to add new projects.
 
 export const mlProjects = [
   {
