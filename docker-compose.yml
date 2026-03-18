@@ -1,0 +1,11 @@
+
+version: "3.9"
+
+services:
+  ml-sentiment-api:
+    build:
+      context: ./ml-sentiment/api
+    container_name: ml-sentiment-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

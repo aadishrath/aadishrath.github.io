@@ -1,0 +1,14 @@
+# Core numerical + data stack
+numpy
+pandas
+scikit-learn
+
+# Text preprocessing
+nltk
+
+# Model serving (for later integration with your site)
+fastapi
+uvicorn
+
+# Optional but nice for experiments / metrics
+joblib
