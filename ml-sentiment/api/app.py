@@ -15,6 +15,7 @@ This file demonstrates:
 import os
 import logging
 import joblib
+from http.client import HTTPException
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
@@ -58,9 +59,15 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:8000",
-        "http://127.0.0.1:8000",
-        "https://aadishrath.github.io"
+        "http://localhost:5173",     # Vite dev server
+        "http://127.0.0.1:5173",
+
+        "http://localhost:4173",     # Vite preview
+        "http://127.0.0.1:4173",
+
+        "https://localhost:8000",
+        "https://127.0.0.1:8000",
+        "https://aadishrath.github.io" # Production site
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -206,6 +213,50 @@ def predict_batch(payload: BatchSentimentRequest):
     return {
         "model_version": MODEL_VERSION,
         "results": results
+    }
+
+# -----------------------------
+# Full Pipeline Prediction endpoint
+# -----------------------------
+@app.post("/predict_full")
+async def predict_full(request: SentimentRequest, version: str = "v1"):
+    text = request.text
+
+    if not text or not text.strip():
+        raise HTTPException(status_code=400, detail="Text input is empty")
+
+    try:
+        X = vectorizer.transform([text])                     # 1. Transform text
+        prediction = classifier.predict(X)[0]                # 2. Predict sentiment + confidence
+        proba = classifier.predict_proba(X)[0]
+        confidence = max(proba)
+
+        analyzer = vectorizer.build_analyzer()               # 3. Extract tokens using the same tokenizer as vectorizer
+        tokens = analyzer(text)
+
+        feature_names = vectorizer.get_feature_names_out()   # 4. Get feature names and model coefficients
+        coef = classifier.coef_[0]  # assuming binary classifier
+
+        max_abs = max(abs(c) for c in coef) or 1.0           # 5. Compute max absolute weight for normalization
+
+        token_scores = []                                    # 6. Build normalized token-level scores
+        for tok in tokens:
+            if tok in feature_names:
+                idx = list(feature_names).index(tok)
+                raw_score = float(coef[idx])
+                norm_score = raw_score / max_abs  # Normalize to [-1, 1]
+            else:
+                norm_score = 0.0
+            token_scores.append([tok, norm_score])
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+    return {
+        "sentiment": prediction,
+        "confidence": float(confidence),
+        "tokens": token_scores,
+        "model_version": MODEL_VERSION
     }
 
 # -----------------------------
