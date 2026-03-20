@@ -13,7 +13,6 @@ export default function SentimentCard({ result }) {
   if (!result) return null;
 
   const { score, label, tokens } = result;
-
   const labelClass =
     label === "positive" ? "label-positive" : label === "negative" ? "label-negative" : "label-neutral";
 

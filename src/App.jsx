@@ -9,7 +9,7 @@ import './App.css';
 const Home = lazy(() => import('./pages/Home/Home'));
 const MLProjects = lazy(() => import('./pages/Projects/MLProjects'));
 const FEProjects = lazy(() => import('./pages/Projects/FEProjects'));
-const SentimentDemo = lazy(() => import('./pages/SentimentDemo/SentimentDemo'));
+const SentimentDemo = lazy(() => import('./pages/SentimentDemo/index'));
 
 // Routing setup
 function App() {
