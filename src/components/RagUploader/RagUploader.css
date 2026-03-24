@@ -1,0 +1,48 @@
+.rag-upload-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+.rag-file-picker {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.rag-file-picker input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rag-upload-meta {
+  margin-top: 0.75rem;
+}
+
+.rag-upload-status {
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.rag-upload-panel .rag-panel-header h3 {
+  margin-bottom: 0.25rem;
+}
+
+.rag-upload-panel .rag-panel-header p {
+  font-size: 0.92rem;
+}
+
+body.dark .rag-upload-status {
+  color: #cbd5e1;
+}
+
+@media (max-width: 640px) {
+  .rag-upload-actions {
+    grid-template-columns: 1fr;
+  }
+}

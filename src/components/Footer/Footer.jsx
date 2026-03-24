@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import './Footer.css';
 
 // Footer component
-function Footer({ref}) {
+const Footer = forwardRef(function Footer(_, ref) {
     const [showPopup, setShowPopup] = useState(false);
+    const timeoutRef = useRef(null);
+
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 9000); // auto-hide after 9s
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => setShowPopup(false), 9000);
     };
 
     return (
@@ -66,6 +79,6 @@ function Footer({ref}) {
             </section>
         </footer>
     );
-}
+});
 
 export default Footer;

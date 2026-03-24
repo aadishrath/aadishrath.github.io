@@ -1,8 +1,8 @@
 import { aboutMe, summary } from '../../data/aboutMe';
 import { buckets } from '../../data/langAndTools';
 import * as FaIcons from 'react-icons/fa';
-import './Home.css';
 import { iconsMap } from '../../assets/iconsMap';
+import './Home.css';
 
 
 // Home page
@@ -66,7 +66,7 @@ export default function Home() {
           <p className="side-note-title gradient-text">Side Note</p>
           <div className='section-underline'></div>
         </header>
-        <p>Thanks for visiting — explore more on desktop for the full experience.</p>
+        <p>Thanks for visiting — explore all features on larger screens.</p>
       </section>
     </div>
   );

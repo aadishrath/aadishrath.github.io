@@ -3,6 +3,34 @@
 
 export const mlProjects = [
   {
+    icon: 'AI',
+    title: 'Interactive RAG Assistant',
+    description: 'A full-stack retrieval-augmented generation app with document ingest, vector search, grounded citations, and a portfolio-native React UI.',
+    repo: 'https://github.com/aadishrath/aadishrath.github.io',
+    details: `This project turns the portfolio into an interactive Retrieval-Augmented Generation system that users can actually query. It combines a React 19 frontend with a FastAPI backend, local vector retrieval, and optional OpenAI-powered answer synthesis for higher quality grounded responses.
+
+    ## Project Overview
+      Users can load a packaged demo corpus or upload their own markdown, text, and PDF files.
+      The backend chunks documents, generates embeddings, builds a FAISS index, retrieves relevant passages, and returns cited answers with retrieval diagnostics.
+
+    ## Resume-Friendly Stack
+      - Frontend: React 19, Vite, CSS aligned with the portfolio design
+      - Backend: FastAPI, Pydantic, python-multipart
+      - Retrieval: sentence-transformers embeddings + FAISS vector search
+      - LLM layer: optional OpenAI Responses API fallback
+
+    ## Key Features
+      - Corpus upload and demo corpus bootstrap flow
+      - Chunked indexing pipeline for markdown, text, and PDF documents
+      - Hybrid semantic plus lexical reranking
+      - Grounded answers with source previews and retrieval scores
+      - Portfolio-native UI instead of a generic admin dashboard
+
+    ## Why it matters
+      This project demonstrates the skills employers usually look for in applied AI and ML platform roles: API design, retrieval engineering, UI integration, explainability, and end-to-end product ownership.
+    `
+  },
+  {
     icon: '🏡',
     title: 'House Price Prediction',
     description: 'This project builds and evaluates multiple machine learning models to predict house prices based on various features.',
@@ -126,7 +154,7 @@ export const mlProjects = [
         - Python (v3.8+)
         - PostgreSQL
         - Docker (optional for containerization)
-        - Must Download dataset sentiment140 from [Kaggle dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) and place the csv file in backend\dataset\sentiment140.csv
+        - Must Download dataset sentiment140 from [Kaggle dataset](https://www.kaggle.com/datasets/kazanova/sentiment140) and place the csv file in backend/dataset/sentiment140.csv
 
       ### Backend Setup
         Setup Backend

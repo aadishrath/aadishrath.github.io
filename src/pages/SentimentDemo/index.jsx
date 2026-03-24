@@ -4,10 +4,10 @@ import { useEffect, useState, useRef, Suspense } from "react";
 import SentimentCard from "../../components/SentimentCard/SentimentCard";
 import Spinner from "../../components/Spinner/Spinner";
 import FullSentimentCard from "../../components/FulllSentimentCard/FullSentimentCard";
+import { SENTIMENT_API_URL } from "../../lib/api";
 import "./LightSection.css";
 
 const PYODIDE_CDN = "https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.js";
-const API_URL = import.meta.env.VITE_SENTIMENT_API_URL;
 
 export default function SentimentDemo() {
   const defaultText = "I loved the product — it was fast, intuitive, and delightful!";
@@ -49,7 +49,6 @@ export default function SentimentDemo() {
       }
 
       setLoadingMessage("Starting Pyodide...");
-      // eslint-disable-next-line no-undef
       const pyodide = await window.loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.24.0/full/" });
 
       const pythonCode = `
@@ -68,7 +67,7 @@ export default function SentimentDemo() {
             "expectations": 2
         }
 
-        TOKEN_RE = re.compile(r"\\w+|[^\s\\w]", re.UNICODE)
+        TOKEN_RE = re.compile(r"\\w+|[^\\s\\w]", re.UNICODE)
 
         def analyze_sentiment(text):
             tokens = TOKEN_RE.findall(text.lower())
@@ -169,7 +168,7 @@ export default function SentimentDemo() {
     setFullError("");
 
     try {
-      const res = await fetch(`${API_URL}/predict_full?version=${fullVersion}`, {
+      const res = await fetch(`${SENTIMENT_API_URL}/predict_full?version=${fullVersion}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: fullText }),

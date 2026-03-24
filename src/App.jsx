@@ -10,6 +10,7 @@ const Home = lazy(() => import('./pages/Home/Home'));
 const MLProjects = lazy(() => import('./pages/Projects/MLProjects'));
 const FEProjects = lazy(() => import('./pages/Projects/FEProjects'));
 const SentimentDemo = lazy(() => import('./pages/SentimentDemo/index'));
+const RagDemo = lazy(() => import('./pages/RagDemo/index'));
 
 // Routing setup
 function App() {
@@ -41,6 +42,7 @@ function App() {
               <Route path="/projects" element={<MLProjects />} />
               <Route path="/frontend" element={<FEProjects />} />
               <Route path="/sentiment" element={<SentimentDemo />} />
+              <Route path="/rag" element={<RagDemo />} />
             </Routes>
           </Suspense>
         </main>

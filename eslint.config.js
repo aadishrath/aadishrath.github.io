@@ -5,7 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'ml-rag/api/.venv/**', 'server/.venv/**']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
