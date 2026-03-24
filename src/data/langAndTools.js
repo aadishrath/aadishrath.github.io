@@ -4,31 +4,31 @@ export const buckets = [
   {
     title: 'Machine Learning',
     icon: 'FaBrain',
-    items: ['XGBoost', 'CNN', 'Hyperparameter Tuning', 'Grid Search', 'Feature Engineering'],
+    items: ['Scikit-learn', 'TF-IDF', 'SVM', 'RAG', 'LLMs'],
   },
   {
     title: 'GenAI & LLMs',
     icon: 'FaRobot',
-    items: ['Hugging Face (beginner)', 'RAG (beginner)', 'GenAI (beginner)', 'LLM (beginner)'],
+    items: ['RAG Pipelines', 'Sentence Transformers', 'FAISS', 'pgvector', 'OpenAI-ready Architecture'],
   },
   {
     title: 'Frontend & Web',
     icon: 'FaLaptopCode',
-    items: ['Angular 17', 'React', 'Tailwind CSS', 'TypeScript'],
+    items: ['React 19', 'Angular 17', 'Vite', 'React Router', 'Client-side Chat UX'],
   },
   {
-    title: 'Dev Tools & Platforms',
+    title: 'Backend & APIs',
     icon: 'FaTools',
-    items: ['Node.js', 'Git & GitHub', 'VS Code', 'Python'],
-  },
-  {
-    title: 'Data & Analytics',
-    icon: 'FaChartBar',
-    items: ['Pandas', 'Numpy', 'Seaborn', 'Scikit-learn'],
+    items: ['FastAPI', 'Pydantic', 'Python', 'REST APIs', 'PDF Ingestion'],
   },
   {
     title: 'Frameworks & Libraries',
     icon: 'FaCogs',
-    items: ['TensorFlow', 'PyTorch', 'Keras'],
+    items: ['PyTorch', 'TensorFlow', 'Hugging Face', 'pypdf', 'React Icons'],
+  },
+  {
+    title: 'Dev Tools & Platforms',
+    icon: 'FaChartBar',
+    items: ['Git & GitHub', 'PostgreSQL', 'Node.js', 'ESLint', 'VS Code'],
   },
 ];

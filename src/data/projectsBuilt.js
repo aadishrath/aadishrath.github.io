@@ -242,7 +242,7 @@ export const feProjects = [
     description: 'A responsive and modern mock banking app built with React and Tailwind CSS to showcase React hooks and state management.',
     repo: 'https://github.com/adirathore7/adirathore7.github.io',
     details: `
-    # Mock Banking App – Aadish Rathore
+    # Mock Banking App
     
     Welcome to the source code for my personal portfolio website, hosted at adirathore7.github.io. This site showcases my projects, skills, experience, and contact information in a clean, responsive layout.
 
@@ -280,7 +280,7 @@ export const feProjects = [
     description: 'A responsive and modern personal portfolio website built with React and Tailwind CSS to showcase projects and skills.',
     repo: 'https://github.com/aadishrath/aadishrath.github.io',
     details: `
-    # Aadish Rathore — Portfolio
+    # My Portfolio
 
     Welcome to my personal portfolio, built with **React**, **Vite**, and **Tailwind CSS v4**. This site showcases my work as a Machine Learning Engineer and Full-Stack Developer, with a focus on recruiter-facing polish, modular architecture, and real-world impact.
 

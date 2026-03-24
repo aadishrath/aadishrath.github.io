@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import SiteChatbot from './components/SiteChatbot/SiteChatbot';
 import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import Spinner from './components/Spinner/Spinner';
 import './App.css';
@@ -47,6 +48,7 @@ function App() {
           </Suspense>
         </main>
         <Footer ref={footerRef} />
+        <SiteChatbot />
       </div>
     </Router>
   );
