@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python environments and local backend config
+.venv/
+server/.venv/
+ml-rag/api/.venv/
+server/.env
+ml-rag/api/.env
+__pycache__/
+*.py[cod]
